@@ -25,7 +25,7 @@ The basic user for working and developing with the robot is *'asarob'*. The pass
 
 2. Log in to the robot base PC, use the standard drivers to stop state machine scenario:
    ```
-   ssh -X telekom@b.cob4-7
+   ssh -X telekom@b1.cob4-7
    rosservice call /behavior/stop_state_machine
    ```   
 

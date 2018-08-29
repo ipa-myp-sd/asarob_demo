@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<launch>
+
+	<arg name="robot" default="cob4-7"/>
+
+	<!-- launch realsense2_cam -->
+	<include file="$(find cob_bringup)/robot.launch">
+		<arg name="robot" value="$(arg robot)"/>
+	</include>
+	
+</launch>

@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+
+<launch>
+
+	<!-- hack: needed for localization if the base does not work -->
+	<node pkg="tf" type="static_transform_publisher" name="face_cam_link_to_camera_link_broadcaster" args="0 0 0 0 0 0 1 /face_cam_link /camera_link 100" />
+
+	<!-- launch realsense2_cam -->
+	<include file="$(find realsense2_camera)/launch/rs_rgbd.launch" />
+	
+</launch>

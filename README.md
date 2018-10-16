@@ -51,3 +51,5 @@ The basic user for working and developing with the robot is *'asarob'*. The pass
    ```
    export ROS_MASTER_URI=http://b1.cob4-7:11311
    ```
+There the following the list of additional software repositories is need for running the demonstration use case:
+- cob_robots (```git clone -b woz_karlsruhe https://github.com/ipa-mjp/cob_robots.git```)

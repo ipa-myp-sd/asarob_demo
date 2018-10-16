@@ -53,3 +53,4 @@ The basic user for working and developing with the robot is *'asarob'*. The pass
    ```
 There the following the list of additional software repositories is need for running the demonstration use case:
 - cob_robots (```git clone -b woz_karlsruhe https://github.com/ipa-mjp/cob_robots.git```)
+- cob_robots (```git clone -b woz_leipzig https://github.com/ipa-mjp/cob_calibration_data.git```)

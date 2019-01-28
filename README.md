@@ -33,7 +33,7 @@ The basic user for working and developing with the robot is *'asarob'*. The pass
 
 1. Log in to the robot base PC, stop the standard drivers (if running) and load the telekom-specific robot drivers:
    ```
-   ssh -X telekom@b1.cob4-7
+   ssh -X asarob@b1.cob4-7
    sudo cob-stop
    sudo cob-command stop_core
    roslaunch cob_bringup robot.launch
@@ -42,9 +42,9 @@ The basic user for working and developing with the robot is *'asarob'*. The pass
    ```
    than initialize all driver via joysticks
    
-2. Log in to the robot head PC and start the face camera:
+2. Log in to the robot head PC and start the face camera (optional):
    ```
-   ssh -X telekom@h1.cob4-7
+   ssh -X asarob@h1.cob4-7
    roslaunch asarob_demo cam3d_realsense2_rgbd.launch
    ```
 3. Export the ROS master URI to the robot and start RViz on your external computer:
@@ -54,3 +54,19 @@ The basic user for working and developing with the robot is *'asarob'*. The pass
 There the following the list of additional software repositories is need for running the demonstration use case:
 - cob_robots (```git clone -b woz_karlsruhe https://github.com/ipa-mjp/cob_robots.git```)
 - cob_calibration_data (```git clone -b woz_leipzig https://github.com/ipa-mjp/cob_calibration_data.git```)
+
+## Sequences
+``` Without chaired person ```
+1. Say "hello" via command tool
+2. Move "torso" 45 deg on right side "r45" using command tool
+3. Move "arm_right" to "point5" location using command tool
+4. Animate pointing by running ``` rosrun asarob_demo control.py False```
+5. Move "arm_right" to "side" using command tool
+
+``` With chaired person ```
+1. Move "torso" to "fd15" deg on right side using command tool
+2. Say "hello" via command tool
+3. Move "arm_right" to "point6" location using command tool
+4. Animate pointing by running ``` rosrun asarob_demo control.py True```
+5. Move "torso" to "front" using command tool
+6. Move "arm_right" to "side" using command tool
